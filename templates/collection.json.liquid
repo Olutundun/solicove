@@ -1,0 +1,22 @@
+{% layout none %}
+{
+    "title": {{ collection.title | json }},
+    "description": {{ collection.description | json }},
+    "products": [
+       {% for product in collection.products %}
+         {
+             "title": {{ product.title | json }},
+             "variants": [
+                 {% for variant in product.variants %}
+                    "id": {{ variant.id }},
+                    "option1": {{ variant.option1 | json }},
+                    "option2": {{ variant.option2 | json }},
+                    "option3": {{ variant.option3 | json }},
+                 {% endfor %}
+             ]
+         }
+    {% endfor %}
+    
+    ]
+
+}
