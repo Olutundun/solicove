@@ -23,6 +23,7 @@
         },
         "a980956d-b75b-4796-9c93-e54ba779becb": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
             "text_style": "body"
